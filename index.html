@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Drawing Museum</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">🖼️</div>
+      <div>
+        <h1 id="siteTitle">My Drawing Museum</h1>
+        <p id="siteSubtitle">A small gallery of my favorite works.</p>
+      </div>
+    </div>
+
+    <div class="tools">
+      <input id="search" class="search" type="search" placeholder="Search title/description…" autocomplete="off" />
+      <select id="sort" class="sort">
+        <option value="newest">Sort: Newest</option>
+        <option value="oldest">Sort: Oldest</option>
+        <option value="az">Sort: A → Z</option>
+        <option value="za">Sort: Z → A</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="grid" id="grid"></section>
+  </main>
+
+  <!-- Lightbox / Viewer -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lbClose" id="lbClose" aria-label="Close">✕</button>
+    <div class="lbCard">
+      <img id="lbImg" alt="" />
+      <div class="lbText">
+        <div class="lbTop">
+          <h2 id="lbTitle"></h2>
+          <div class="lbMeta" id="lbMeta"></div>
+        </div>
+        <p id="lbDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> • Made with 🧠 + vibes</span>
+  </footer>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
